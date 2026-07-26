@@ -1,23 +1,1044 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+
+    <!-- JSON-LD for Search Engine Optimization (Naver/Google Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://insurance.reliabledone.com/#webpage",
+          "url": "https://insurance.reliabledone.com/car-insurance-certificate",
+          "name": "자동차보험증명서 발급 및 나이대별 보험료 비교 분석 가이드 (2026)",
+          "description": "2026년 기준 자동차보험증명서 및 가입경력증명서의 정확한 온라인 발급 방법과 연령대별 평균 보험료, 할인 특약 조건, 커뮤니티 추천 성지 정보를 종합 비교 제공합니다.",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "홈",
+                "item": "https://insurance.reliabledone.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "자동차보험증명서 가이드",
+                "item": "https://insurance.reliabledone.com/car-insurance-certificate"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://insurance.reliabledone.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "자동차보험증명서와 가입경력증명서의 주요 차이점은 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "자동차보험 가입증명서는 현재 특정 차량이 의무 보험에 정상 가입되어 있는지를 증명하는 당해 계약 확인 서류입니다. 반면, 가입경력증명서는 과거부터 현재까지 본인이 보험에 가입하여 운전한 총 기간을 증명하여 신규 보험 가입 시 경력 인정을 통해 할인 혜택을 받기 위한 서류입니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "정부24 및 민원24를 통한 온라인 발급은 무료인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "정부24나 경찰청 교통민원24 이파인(efine)을 통해 신청하는 운전경력증명서와 보험사 온라인 어플 및 웹사이트에서 직접 출력하는 자동차보험 가입증명서는 수수료 없이 상시 무료로 즉시 발급 가능합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "20대 초반 신규 가입 시 첫 해 보험료를 낮추는 가장 좋은 방법은 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "부모님 명의의 보험에 가족 한정 및 가입경력 인정 대상자로 사전 등록하여 최대 3년 동안의 운전 경력을 인정받는 방법이 가장 유리합니다. 이와 함께 군 운전병 경력이나 해외 운전경력을 증빙서류로 제출하여 할인을 적용받는 방법을 추천합니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #2F4F4F; /* Muted Dark Green Slate */
+            --secondary-color: #4A6B82; /* Soft Ocean Slate */
+            --accent-color: #D48D80; /* Warm Muted Terracotta */
+            --text-color: #3A3C3E; /* Dark Muted Charcoal */
+            --text-light: #6B7280;
+            --bg-light: #FAF9F6; /* Soft Cream Warm Background */
+            --bg-card: #FFFFFF;
+            --bg-hero: linear-gradient(135deg, #2F4F4F 0%, #1A3333 100%);
+            --border-color: #E2E8F0;
+            --border-radius: 16px;
+            --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            --transition: all 0.3s ease;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.8;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Layout */
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.01);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Container (Dual Columns) */
+        .hero-section {
+            background: var(--bg-hero);
+            color: #FFFFFF;
+            padding: 80px 0;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+
+        .hero-text p {
+            font-size: 1.15rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+
+        /* Application Form Card */
+        .interactive-form-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 36px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            color: var(--text-color);
+        }
+
+        .interactive-form-card h2 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .interactive-form-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--primary-color);
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(74, 107, 130, 0.1);
+        }
+
+        .cta-submit-btn {
+            width: 100%;
+            padding: 16px;
+            background-color: var(--accent-color);
+            color: #FFFFFF;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cta-submit-btn:hover {
+            background-color: #C27C70;
+            transform: translateY(-2px);
+        }
+
+        /* Feature Statistics Cards */
+        .stats-section {
+            padding: 60px 0;
+            margin-top: -40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: var(--box-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.01);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 8px;
+        }
+
+        .stat-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Core Article Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2.8fr 1.2fr;
+            gap: 48px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+
+        .article-content {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 48px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .article-content h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 12px;
+            font-weight: 800;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-top: 32px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .article-content p {
+            font-size: 1.05rem;
+            margin-bottom: 24px;
+            color: #4A4D50;
+        }
+
+        .article-content ul, .article-content ol {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        .article-content li {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: #4A4D50;
+        }
+
+        /* Callout Box */
+        .callout-box {
+            background-color: #F0F4F8;
+            border-left: 4px solid var(--secondary-color);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 32px 0;
+        }
+
+        .callout-box h4 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .callout-box p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: var(--text-color);
+        }
+
+        /* Custom Comparison Table styling */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 32px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: #FFFFFF;
+            padding: 16px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+            color: var(--text-color);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #FAFBFD;
+        }
+
+        /* Sidebar Widgets */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .sidebar-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        /* Dynamic Premium Calculator Widget */
+        .calculator-widget {
+            background-color: #F5F7FA;
+            border: 1px solid var(--border-color);
+        }
+
+        .calculator-result {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            display: none;
+        }
+
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .calc-row.total {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-top: 12px;
+        }
+
+        /* Accordion Style FAQ */
+        .faq-container {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-header {
+            padding: 20px 24px;
+            background-color: var(--bg-card);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .faq-header:hover {
+            background-color: #FAFBFD;
+        }
+
+        .faq-content {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            color: #555555;
+            font-size: 0.95rem;
+            border-top: 0px solid var(--border-color);
+        }
+
+        .faq-item.active .faq-content {
+            padding: 20px 24px;
+            max-height: 500px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Keyword Tag Grid */
+        .keyword-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .keyword-tag {
+            background-color: #EBF1F5;
+            color: var(--secondary-color);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .keyword-tag:hover {
+            background-color: var(--secondary-color);
+            color: #FFFFFF;
+        }
+
+        /* Footer Layout */
+        footer {
+            background-color: var(--primary-color);
+            color: #E2E8F0;
+            padding: 60px 0;
+            font-size: 0.9rem;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            font-size: 1.3rem;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .footer-links h5 {
+            font-size: 1rem;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #A0AEC0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: #FFFFFF;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #A0AEC0;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .main-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            .article-content {
+                padding: 24px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="/">자동차보험 분석 연구센터</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#certificate-guide">증명서 발급</a></li>
+                    <li><a href="#pricing-model">연령별 요금</a></li>
+                    <li><a href="#community-tip">커뮤니티 정보</a></li>
+                    <li><a href="#faq">자주 묻는 질문</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>2026년 최신 자동차보험증명서 간편 발급 및 요금 계산 가이드</h1>
+                    <p>
+                        자동차를 등록하거나 명의를 이전할 때 필요한 필수 서류인 가입증명서를 단 1분 만에 온라인으로 출력하고 팩스로 전송하는 방법을 상세히 안내합니다. 더불어 연령별 예상 할인 혜택과 다이렉트 최저가 요금 설계 팁을 함께 확인해 보세요.
+                    </p>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="#certificate-guide" class="cta-submit-btn" style="text-decoration:none; text-align:center; max-width: 220px;">온라인 발급법 알아보기</a>
+                    </div>
+                </div>
+                
+                <!-- Dwell Time Booster: Interactive Simulation Card -->
+                <div class="interactive-form-card" id="formCard">
+                    <h2>증명서 즉시 발급 및 맞춤 요율 컨설팅</h2>
+                    <p>필요한 정보 항목들을 기입해 주시면 관련 발급 진행 절차와 개인 맞춤 최저가 보험료 분석 가이드를 제공합니다.</p>
+                    <form onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="userName">신청자 성함</label>
+                            <input type="text" id="userName" placeholder="이름을 입력하세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userAge">해당 연령대</label>
+                            <select id="userAge" required>
+                                <option value="">나이 선택</option>
+                                <option value="20">20대 초중반</option>
+                                <option value="25">25세 이상 ~ 29세 이하</option>
+                                <option value="30">30대 직장인</option>
+                                <option value="40">40대 가정 및 일반</option>
+                                <option value="50">50대 이상 은퇴대비</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="carrierSelect">현재 가입 혹은 희망 브랜드</label>
+                            <select id="carrierSelect" required>
+                                <option value="">보험사를 선택해 주세요</option>
+                                <option value="samsung">삼성화재 다이렉트</option>
+                                <option value="hyundai">현대해상 하이카</option>
+                                <option value="db">DB손해보험 프로미</option>
+                                <option value="kb">KB손해보험 매직카</option>
+                                <option value="carrot">캐롯손해보험 퍼마일</option>
+                                <option value="others">기타 인터넷 전문 보험 브랜드</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="userPurpose">발급 및 조회 목적</label>
+                            <textarea id="userPurpose" rows="2" placeholder="예: 차량 이전등록용, 가입경력 합산 할인 신청용, 일반 보관용" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-submit-btn">맞춤 안내 자료 받아보기</button>
+                    </form>
+                    <div id="formSuccessMessage" style="display:none; margin-top:20px; padding:15px; background-color:#EBF5EC; border:1px solid #C2E2C5; border-radius:8px; font-size:0.9rem; color: #2E6B34; text-align: center;">
+                        분석 컨설팅 신청 접수가 성료되었습니다. 가입하신 연락처 또는 메일로 가이드가 신속히 송부됩니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1분 내외</div>
+                    <div class="stat-label">즉시 가입 증서 다운로드</div>
+                    <div class="stat-desc">모바일 앱 및 인터넷 간편 인증서 로그인을 활용한 초고속 PDF 인쇄 서비스</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">최대 38%</div>
+                    <div class="stat-label">다이렉트 인터넷 할인율</div>
+                    <div class="stat-desc">2026년 기준 오프라인 대비 가장 요율이 저렴한곳 설계 방식</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3년 경력</div>
+                    <div class="stat-label">가입경력인정제도 활용</div>
+                    <div class="stat-desc">가족 및 운전병 경력증명서를 통한 초기가입자 평균 금액 부담 최소화</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <div class="container main-grid">
+            
+            <!-- Left: SEO Rich Content -->
+            <article class="article-content" id="certificate-guide">
+                <h2>자동차보험증명서 발급 및 구조적 이해</h2>
+                <p>
+                    자동차를 구매하여 구청에 신규 등록을 하거나, 기존 소유주로부터 소유권을 넘겨받는 명의이전을 진행할 때는 반드시 차량명의 가입증서를 제출해야 합니다. 이때 발급하는 서류가 바로 <strong>자동차보험 가입증명서</strong>입니다. 간혹 자동차보험증권과 혼동하시는 경우가 있으나, 보험증권은 상세 보장 조건과 특약 등이 포괄적으로 명시된 약관 중심의 마스터 계약서인 반면, 증명서는 단순히 당해 차량이 대한민국 법정 의무보험 담보 범위를 충족하여 무사히 계약된 상태임을 정부 기관 등에 간단히 입증하는 약식 증서입니다.
+                </p>
+                <p>
+                    보다 정교하고 객관화된 보험 설계 가이드라인이나 세부 정보는 보증된 정보 포털인 <a href="https://insurance.reliabledone.com" target="_blank" rel="noopener nofollow">reliabledone 자동차보험 가이드</a>를 방문하여 깊이 있는 분석을 직접 확인해 보시는 것을 추천해 드립니다. 또한 전반적인 제도적 기본 개념에 대해서는 <a href="https://namu.wiki/w/%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98" target="_blank" rel="noopener nofollow">나무위키 자동차보험 사전</a>을 경유하여 용어 정리를 확인하실 수 있으며, 공식 행정 민원 청구에 대한 사항은 국가 공식 포털인 <a href="https://www.gov.kr" target="_blank" rel="noopener nofollow">정부24 누리집</a>을 통해 손쉽게 온라인 발급 신청을 완료하실 수 있습니다.
+                </p>
+
+                <div class="callout-box">
+                    <h4>발급서류 핵심 체크 포인트</h4>
+                    <p>
+                        의무보험인 대인배상 I 및 대물배상 법정 최소 기준을 충족하고 있는지 반드시 표기되어야 하며, 피보험자 인적 정보와 차량등록번호(혹은 차대번호)가 현 서류와 정확히 맞아떨어져야 접수 부적격 사태를 미연에 방지할 수 있습니다.
+                    </p>
+                </div>
+
+                <h3>1. 주요 보험사 온라인 및 앱 모바일 발급 방법</h3>
+                <p>
+                    각 브랜드 손해보험사의 스마트폰 공식 어플을 이용하시면 24시간 언제라도 본인 인증 단축 절차를 경유해 무료 발급 및 PDF 저장이 가능합니다. 아래는 업계 선두인 주요 4대 손해보험사 모바일 가이드라인입니다.
+                </p>
+                <ul>
+                    <li><strong>삼성화재 다이렉트 앱 활용:</strong> 로그인 진행 후 전체 메뉴에서 나의 계약 조회 페이지 내 마이페이지 목록으로 이동하여 증명서 발급 아이콘 클릭, 이메일 혹은 즉시 모바일 팩스 송신을 처리할 수 있습니다.</li>
+                    <li><strong>현대해상 하이카 인터넷 창구:</strong> 홈페이지에 로그인하여 계약조회/증명서 메뉴를 찾아간 후 자동차보험 가입확인서 항목을 선택, 프린터 직접인쇄 혹은 가상 이미징 출력을 선택하여 받아봅니다.</li>
+                    <li><strong>DB손해보험 프로미 앱 서비스:</strong> 계약 관리 카테고리 속에서 가입확인서를 즉시 출력하는 전용 프로세스를 구축해두어 간편한 생체인증 후 수령할 수 있습니다.</li>
+                    <li><strong>KB손해보험 매직카 온라인 채널:</strong> 다이렉트 로그인창에서 계약변경/조회 탭 클릭 및 각종 필수 확인서 발급을 요청하면 30초 내 카카오톡 알림톡 파일 공유 연계가 지원되어 편리합니다.</li>
+                </ul>
+
+                <h3>2. 정부24 및 행정 민원망을 이용한 대체 서류 및 운전경력 입증</h3>
+                <p>
+                    가입증명서 이외에 할인 등급에 직접 영향을 미치는 이력을 보완하기 위해 <strong>운전경력증명서</strong>를 별도 신청하기도 합니다. 이는 정부24 민원실과 이파인 경찰교통망에서 무료로 발행합니다. 특히 과거 타인 명의 차량이나 군 운전 경력을 인정받으려는 20대 초반 및 20대 중반 가입 예정자들의 경우, 이러한 증빙 서류를 충실히 구비하는 것이 첫 가입의 막대한 초입 비용을 대폭 아끼는 가장 핵심적인 할인 비결입니다.
+                </p>
+
+                <h2>연령대별 자동차보험료 평균 금액 및 할인 적용 비결</h2>
+                <p>
+                    나이대별로 책정되는 보험요 요율 체계는 상당히 극명한 차이점을 드러냅니다. 청년기에는 사고 발생 위험 빈도가 비교적 높게 추정되기 때문에 할증 적용 비중이 높고, 중장년층으로 접어들수록 점차 하향 조율되어 저렴한 최저가 상품 설계가 실현되기 시작합니다. 아래 분석표는 2026년 요금제를 반영한 가입 형태별 연령 가이드 통계치입니다.
+                </p>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>가입 대상 연령대</th>
+                                <th>평균 예상 보험 요금</th>
+                                <th>인기 가입 종류 / 추천 특약</th>
+                                <th>경력증명 할인 및 노하우</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20대 초반 사회초년생 (신규)</td>
+                                <td>약 180만원 - 250만원 선</td>
+                                <td>다이렉트 대물 무한정, 1인한정</td>
+                                <td>부모님 밑 지정1인 가입경력합산 필수</td>
+                            </tr>
+                            <tr>
+                                <td>20대 중반 직장인</td>
+                                <td>약 130만원 - 180만원 선</td>
+                                <td>안전장치 장착 할인 및 마일리지</td>
+                                <td>군 운전병 경력증명 연계 10% 이상 적용</td>
+                            </tr>
+                            <tr>
+                                <td>20대 후반 단독 가입</td>
+                                <td>약 90만원 - 130만원 선</td>
+                                <td>커롯 퍼마일 등 주행거리 연동형</td>
+                                <td>티맵 운전점수 할인 앱 활용 극대화</td>
+                            </tr>
+                            <tr>
+                                <td>30대 초반 및 중반 패밀리</td>
+                                <td>약 65만원 - 90만원 선</td>
+                                <td>부부 한정 특약, 자녀 할인 연계</td>
+                                <td>3년 무사고 할인율 본격 체감 단계</td>
+                            </tr>
+                            <tr>
+                                <td>30대 후반 및 40대 베테랑</td>
+                                <td>약 50만원 - 70만원 선</td>
+                                <td>가족안심 종합 패키지 설계</td>
+                                <td>안전운전 점수 및 블랙박스 어플 활용 싼곳 좌표</td>
+                            </tr>
+                            <tr>
+                                <td>50대 이상 시니어</td>
+                                <td>약 55만원 - 80만원 선</td>
+                                <td>부모님 1인 및 은퇴자 맞춤형</td>
+                                <td>고령운전자 교육 이수 및 실시간 AI 할인</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>3. 나이대에 숨겨진 구조적 장단점 및 차이점</h3>
+                <p>
+                    가장 눈여겨봐야 할 부분은 초과 요율이 서서히 소멸되는 만 26세 및 만 30세 연령 한정 분기점입니다. 제일 저렴한곳 찾기에 몰두하는 디시인사이드 차갤 유저나 보배드림 회원들의 생생한 내돈내산 가입 후기를 면밀하게 수집해 보면, 연령 한정이 단 하루 차이로도 총 요금의 20% 가까이를 경감시켜 준다는 사실을 쉽게 증명해 냅니다. 에펨코리아 및 펨코 등 청년 이용자가 많은 대표적 인터넷 포털에서도 군대 운전 전역자 혜택이나 토스 어플리케이션 내 포인트 캐시백 행사를 공략하는 팁들이 매 분기마다 업데이트되는 양상을 보입니다.
+                </p>
+
+                <h2>현명한 자동차보험 저렴한곳 비교와 계약 분석 노하우</h2>
+                <p>
+                    무조건 대형사 브랜드 순위에만 의존하여 무턱대고 가입을 실행하기보다는, 인터넷 다이렉트 상담 컨설팅 시스템을 유연하게 활용하고 온라인 계산기 어플을 직접 돌려 보면서 세부 특약을 스스로 추가하고 제외하는 스마트한 접근 태도가 필요합니다.
+                </p>
+                <p>
+                    특히 매달 주행한 거리 단위만큼만 탄력적으로 요금이 누적 계산되는 특이 요금제나, 평일 자가용 미운행 조건 환급 상품, 대중교통 이용 실적에 기반한 우대 등 다양한 장점을 극대화하는 노련미가 요구됩니다. 또한 인공지능 트렌드가 짙어지는 최근에는 챗지피티 및 제미나이 등 고도화된 연산 모델을 통한 실시간 보장 진단이나 비교 좌표 분석 역시 대중적인 자가 견적 도구로 급부상하고 있어 시대의 흐름을 반영한 가입 기술이 빛을 발하고 있습니다.
+                </p>
+            </article>
+
+            <!-- Right: Interactive Dynamic Tools / Sidebar -->
+            <aside class="sidebar">
+                
+                <!-- Dynamic Insurance Premium Calculator Widget -->
+                <div class="sidebar-card calculator-widget">
+                    <h3>실시간 모의 요금 계산기</h3>
+                    <p>나이와 보유 경력 조건을 선택하시면 2026년 기준 예상 평균 보험료를 간편히 시뮬레이션해 줍니다.</p>
+                    
+                    <div class="form-group">
+                        <label for="calcAge">가입 운전자 나이 조건</label>
+                        <select id="calcAge">
+                            <option value="20e">만 21세 이하 최저경력</option>
+                            <option value="20m">만 24세 이하 청년</option>
+                            <option value="20l">만 26세 이상 일반</option>
+                            <option value="30e">만 30세 이상 완전경력</option>
+                            <option value="40">만 35세 ~ 49세 최저요율</option>
+                            <option value="50">만 50세 이상 실버할인</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calcCarrier">가입 채널 선택</label>
+                        <select id="calcCarrier">
+                            <option value="direct">인터넷 온라인 다이렉트 (할인 높음)</option>
+                            <option value="agent">오프라인 설계사 대면 (일반 요금)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calcAccidents">과거 무사고 유지 기간</label>
+                        <select id="calcAccidents">
+                            <option value="no">최근 1년 이내 사고 이력 있음</option>
+                            <option value="yes1">무사고 1년 차</option>
+                            <option value="yes3">무사고 3년 이상 (할인 최대)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calcOptions">안전장치 및 추가 스마트 옵션</label>
+                        <select id="calcOptions">
+                            <option value="none">없음</option>
+                            <option value="some">블랙박스 장착</option>
+                            <option value="all">블랙박스 + 차선이탈 방지 + 커넥티드 스마트 특약</option>
+                        </select>
+                    </div>
+
+                    <button class="cta-submit-btn" style="background-color: var(--secondary-color);" onclick="calculatePremium()">보험요 예상 분석하기</button>
+
+                    <!-- Hidden Result Display Container -->
+                    <div class="calculator-result" id="calcResultBox">
+                        <h4>분석 산출 보고서</h4>
+                        <div class="calc-row">
+                            <span>연간 추정 평균요금:</span>
+                            <strong id="resPremium">0 원</strong>
+                        </div>
+                        <div class="calc-row">
+                            <span>월 환산 분납 부담액:</span>
+                            <strong id="resMonthly">0 원</strong>
+                        </div>
+                        <div class="calc-row text-success">
+                            <span>총 할인 적용비율:</span>
+                            <strong id="resDiscount" style="color:var(--accent-color);">0%</strong>
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 12px; line-height: 1.4;">
+                            위 결과는 금융 협회 연간 공시 기초율을 근거로 가상 시뮬레이션한 수치입니다. 실제 특약 충족 수준에 따라 증감될 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Related Keywords Section (LSI SEO Optimization) -->
+                <div class="sidebar-card">
+                    <h3>함께 많이 찾는 카테고리</h3>
+                    <p>인터넷 검색 포털과 각종 자동차 커뮤니티에서 빈번하게 유입되는 화제의 검색 좌표 모음입니다.</p>
+                    <div class="keyword-box">
+                        <a href="#certificate-guide" class="keyword-tag">자동차보험증명서 싼곳</a>
+                        <a href="#certificate-guide" class="keyword-tag">다이렉트 최저가 성지</a>
+                        <a href="#pricing-model" class="keyword-tag">20대 첫차 평균 요금</a>
+                        <a href="#pricing-model" class="keyword-tag">가입경력증명서 출력</a>
+                        <a href="#certificate-guide" class="keyword-tag">군대 경력인정 하는법</a>
+                        <a href="#faq" class="keyword-tag">정부24 운전증명 무상발급</a>
+                        <a href="#community-tip" class="keyword-tag">토스 캐시백 혜택 정보</a>
+                        <a href="#pricing-model" class="keyword-tag">보험료 인상 요금제 장단점</a>
+                        <a href="#certificate-guide" class="keyword-tag">AI 다이렉트 비교 분석</a>
+                        <a href="#pricing-model" class="keyword-tag">3년 무사고 할인율 비교</a>
+                        <a href="#certificate-guide" class="keyword-tag">패밀리카 부부한정 요금</a>
+                        <a href="#faq" class="keyword-tag">수입차 다이렉트 추천 순위</a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- FAQ Section -->
+        <section style="background-color: #F0F2F5; padding: 80px 0; border-top-left-radius: 40px; border-top-right-radius: 40px;" id="faq">
+            <div class="container" style="max-width: 900px;">
+                <h2 style="text-align: center; font-size: 2rem; color: var(--primary-color); margin-bottom: 16px; font-weight: 800;">자주 해결하는 의문 사항 (FAQ)</h2>
+                <p style="text-align: center; color: var(--text-light); margin-bottom: 48px;">사용자들이 가장 혼동하기 쉽고 질문 빈도가 높았던 항목들을 모아 즉각 답변해 드립니다.</p>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            Q1. 인터넷이나 앱으로 내려받은 증명서도 법적 효력이 완전한가요?
+                            <span>+</span>
+                        </div>
+                        <div class="faq-content">
+                            예, 그렇습니다. 금융사 및 정부 포털을 통해 발급된 자동차보험 가입증명서는 디지털 전자 서명이 담긴 공적 위변조 방지 양식이 내장되어 있어 관공서 제출 및 차량 등록 명의이전 용도로 완전히 법정 적격 서류로 수리됩니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            Q2. 가입경력인정제도는 가입 완료 후에도 사후 등록이 지원되나요?
+                            <span>+</span>
+                        </div>
+                        <div class="faq-content">
+                            그렇습니다. 만약 신규 최초 계약할 때 가족 경력인정 서류나 군 운전증명서 등을 누락하여 기본 요율로 비싸게 납입했을지라도, 계약 기간 도중에 혹은 기간이 만료되어 종료된 이후라도 소급해서 경력 인정을 적용해 초과 납부된 비용 차액을 환급금 형태로 소급 돌려받을 수 있습니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            Q3. 주말이나 늦은 심야에도 가입확인서 인쇄가 가능한가요?
+                            <span>+</span>
+                        </div>
+                        <div class="faq-content">
+                            각 보험사의 대표 공식 어플 및 홈페이지는 연중무휴 24시간 실시간 조회가 가능한 백엔드 데이터베이스를 운용하고 있습니다. 따라서 공휴일, 일요일, 새벽 시간대라 할지라도 간편 로그인을 통해 언제든 무료 발급이나 모바일 이메일, 팩스 전송 서비스를 자유롭게 구동할 수 있습니다.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-header" onclick="toggleFaq(this)">
+                            Q4. 공동 명의 차량의 경우 증명서는 누구의 명의로 신청되어야 하나요?
+                            <span>+</span>
+                        </div>
+                        <div class="faq-content">
+                            보통 자동차 등록 시점 혹은 보험 계약 단계에서 대표 피보험자(또는 주로 운전하고 계약자로 이름을 올린 주 피보험자)의 인적 사항을 기본으로 하여 서류가 산출됩니다. 따라서 공동 명의 여부와 관계없이 실질적으로 계약을 체결한 가입자 대표 1인의 정보가 온전히 담겨 있다면 이전 접수가 정상 진행됩니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+  
+    <!-- Interactive JS Functionality -->
+    <script>
+        // FAQ Accordion Handler
+        function toggleFaq(header) {
+            const item = header.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all items
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('active');
+                el.querySelector('span').innerText = '+';
+            });
+            
+            // Toggle clicked item
+            if (!isActive) {
+                item.classList.add('active');
+                header.querySelector('span').innerText = '-';
+            }
+        }
+
+        // Hero Diagnostic Simulation Form
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = '실시간 연계망 확인 중...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.style.display = 'none';
+                document.getElementById('formSuccessMessage').style.display = 'block';
+            }, 1500);
+        }
+
+        // Dynamic Premium Calculator Logic
+        function calculatePremium() {
+            const ageGroup = document.getElementById('calcAge').value;
+            const carrierType = document.getElementById('calcCarrier').value;
+            const accidentPeriod = document.getElementById('calcAccidents').value;
+            const options = document.getElementById('calcOptions').value;
+
+            // Base premium depending on age
+            let basePremium = 1400000;
+            if (ageGroup === '20e') basePremium = 2300000;
+            else if (ageGroup === '20m') basePremium = 1750000;
+            else if (ageGroup === '20l') basePremium = 1200000;
+            else if (ageGroup === '30e') basePremium = 850000;
+            else if (ageGroup === '40') basePremium = 620000;
+            else if (ageGroup === '50') basePremium = 680000;
+
+            // Modifier for Direct vs Agent
+            let channelDiscount = 0;
+            if (carrierType === 'direct') {
+                channelDiscount = 0.17; // 17% discount
+            }
+
+            // Modifier for Accident
+            let accidentModifier = 1.0;
+            let accidentDiscount = 0;
+            if (accidentPeriod === 'no') {
+                accidentModifier = 1.35; // surcharge
+            } else if (accidentPeriod === 'yes1') {
+                accidentDiscount = 0.08;
+            } else if (accidentPeriod === 'yes3') {
+                accidentDiscount = 0.18;
+            }
+
+            // Modifier for Smart Options
+            let optionDiscount = 0;
+            if (options === 'some') {
+                optionDiscount = 0.04;
+            } else if (options === 'all') {
+                optionDiscount = 0.12;
+            }
+
+            // Calculations
+            let totalDiscountRatio = (channelDiscount + accidentDiscount + optionDiscount) * 100;
+            if (accidentPeriod === 'no') {
+                totalDiscountRatio = (channelDiscount + optionDiscount) * 100;
+            }
+
+            let calculatedVal = basePremium * accidentModifier * (1 - (channelDiscount + accidentDiscount + optionDiscount));
+            if (calculatedVal < 450000) calculatedVal = 450000; // Minimum limit
+
+            const monthlyVal = calculatedVal / 12;
+
+            // Render Output
+            document.getElementById('calcResultBox').style.display = 'block';
+            document.getElementById('resPremium').innerText = Math.round(calculatedVal).toLocaleString() + ' 원';
+            document.getElementById('resMonthly').innerText = Math.round(monthlyVal).toLocaleString() + ' 원';
+            document.getElementById('resDiscount').innerText = Math.round(totalDiscountRatio) + ' %';
+        }
+    </script>
+  
